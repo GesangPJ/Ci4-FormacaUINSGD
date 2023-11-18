@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+//ganti login ke masuk
+$routes->get('/masuk', 'Login::index');
+$routes->get('/login', 'Error404::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
