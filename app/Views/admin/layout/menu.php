@@ -14,7 +14,7 @@ $site        = $konfigurasi->listing();
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?= base_url('/admin/dasbor')?>" class="brand-link">
-        <img src="<?= base_url('assets/upload/image/' . $site['icon']) ?>" alt="AdminLTE Logo"
+        <img src="<?= base_url('assets/upload/image/' . $site['icon']) ?>" alt="Logo FORMACA"
             class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><?= $site['namaweb'] ?></span>
     </a>
@@ -24,7 +24,7 @@ $site        = $konfigurasi->listing();
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="<?= base_url() ?>/assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                <img src="<?= base_url() ?>/assets/admin/dist/img/avatar5.png" class="img-circle elevation-2"
                     alt="User Image">
             </div>
             <div class="info">
