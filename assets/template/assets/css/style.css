@@ -166,6 +166,7 @@ h3{
 
 #header .logo {
   font-size: 28px;
+  color: #EC0266;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -175,7 +176,7 @@ h3{
 }
 
 #header .logo a {
-  color: #555555;
+  color: #EC0266;
 }
 
 #header .logo img {
