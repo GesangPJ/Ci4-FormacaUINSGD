@@ -51,6 +51,12 @@ $menu_layanan = $menu->layanan();
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/') ?>">Home</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a
                                 href="<?= base_url('/berita/kategori/berita') ?>">Berita</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a
+                                href="<?= base_url('/berita/kategori/pengumuman') ?>">Pengumuman</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/staff') ?>">Struktur
+                                Organisasi</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a
+                                href="<?= base_url('/berita/kategori/galeri') ?>">Gallery Gambar</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/kontak') ?>">Kontak</a></li>
                     </ul>
                 </div>
