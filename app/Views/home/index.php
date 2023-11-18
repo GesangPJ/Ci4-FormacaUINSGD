@@ -74,7 +74,7 @@ foreach ($profil as $profil) { ?>
         <div class="container" data-aos="zoom-in">
 
             <div class="text-center">
-                <h3>Selamat datang di <?= $konfigurasi['namaweb'] ?></h3>
+                <h3>Selamat Datang Di <?= $konfigurasi['namaweb'] ?></h3>
                 <p><?= $konfigurasi['tagline'] ?></p>
             </div>
 
