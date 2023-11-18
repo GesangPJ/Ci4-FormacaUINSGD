@@ -29,7 +29,7 @@ $menu_layanan = $menu->layanan();
                 src="<?= base_url('assets/upload/image/' . $site['logo']) ?>" alt="<?= $site['namaweb'] ?>"></a>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
-        <h1 class="logo me-auto">FORMACA UIN SGD Bandung</h1>
+        <h1 class="logo me-auto"><a href="<?=base_url('/')?>">FORMACA UIN SGD Bandung</a></h1>
 
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
@@ -41,7 +41,7 @@ $menu_layanan = $menu->layanan();
                                 href="<?= base_url('berita/profil/' . $menu_profil['slug_berita']) ?>"><?= $menu_profil['judul_berita'] ?></a>
                         </li>
                         <?php } ?>
-                        <li><a href="<?= base_url('staff') ?>">Our Team</a></li>
+                        <li><a href="<?= base_url('staff') ?>">Struktur Organisasi</a></li>
                     </ul>
                 </li>
 
@@ -56,10 +56,10 @@ $menu_layanan = $menu->layanan();
                     </ul>
                 </li>
 
-                <li class="dropdown"><a href="#"><span>Galeri &amp; Video</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="<?= base_url('galeri') ?>">Galeri Gambar</a></li>
-                        <li><a href="<?= base_url('video') ?>">Galeri Video</a></li>
+                        <li><a href="<?= base_url('galeri') ?>">Gallery Gambar</a></li>
+                        <!--<li><a href="<?= base_url('video') ?>">Galeri Video</a></li>-->
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="<?= base_url('kontak') ?>">Kontak</a></li>
