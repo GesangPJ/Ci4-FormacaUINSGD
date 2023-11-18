@@ -12397,6 +12397,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   left: 0;
   position: fixed;
   top: 0;
+  width: 350px;
 }
 
 .layout-fixed .control-sidebar {
@@ -13146,6 +13147,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   height: 100vh;
   overflow-y: hidden;
   z-index: 1038;
+  width: 200px;
 }
 
 .main-sidebar a:-moz-focusring {
