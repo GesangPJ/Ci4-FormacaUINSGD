@@ -22,7 +22,8 @@ $menu_layanan = $menu->layanan();
                         <h2><?= $site['namaweb'] ?></h2>
                         <p>
                             <?= nl2br(strip_tags($site['alamat'])) ?>
-                            <br>
+                            <br />
+                            <br />
                             <strong>Telepon:</strong> <?= $site['telepon'] ?><br>
                             <strong>Email:</strong> <?= $site['email'] ?><br>
                         </p>
