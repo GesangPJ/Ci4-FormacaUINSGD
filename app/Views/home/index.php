@@ -130,6 +130,8 @@ foreach ($layanan as $layanan) { ?>
         </div>
     </section><!-- End Services Section -->
 
+    <?php include 'event.php'?>
+
     <?php include 'berita.php'?>
 
     <!-- ======= Contact Section ======= -->
