@@ -135,6 +135,7 @@ class Berita extends BaseController
                     'gambar'          => $namabaru,
                     'tanggal_post'    => date('Y-m-d H:i:s'),
                     'tanggal_publish' => date('Y-m-d', strtotime($this->request->getVar('tanggal_publish'))) . ' ' . date('H:i', strtotime($this->request->getVar('jam'))),
+                    'tanggal_event'   => date('Y-m-d', strtotime($this->request->getVar('tanggal_event'))). ' ' . date('H:i', strtotime($this->request->getVar('jam_event'))), 
                 ];
                 $m_berita->tambah($data);
 
@@ -153,6 +154,7 @@ class Berita extends BaseController
                 'icon'            => $this->request->getVar('icon'),
                 'tanggal_post'    => date('Y-m-d H:i:s'),
                 'tanggal_publish' => date('Y-m-d', strtotime($this->request->getVar('tanggal_publish'))) . ' ' . date('H:i', strtotime($this->request->getVar('jam'))),
+                'tanggal_event'   => date('Y-m-d', strtotime($this->request->getVar('tanggal_event'))). ' ' . date('H:i', strtotime($this->request->getVar('jam_event'))),
             ];
             $m_berita->tambah($data);
 
@@ -209,6 +211,7 @@ class Berita extends BaseController
                     'icon'            => $this->request->getVar('icon'),
                     'gambar'          => $namabaru,
                     'tanggal_publish' => date('Y-m-d', strtotime($this->request->getVar('tanggal_publish'))) . ' ' . date('H:i', strtotime($this->request->getVar('jam'))),
+                    'tanggal_event'   => date('Y-m-d', strtotime($this->request->getVar('tanggal_event'))). ' ' . date('H:i', strtotime($this->request->getVar('jam_event'))),
                 ];
                 $m_berita->edit($data);
 
@@ -227,6 +230,7 @@ class Berita extends BaseController
                 'keywords'        => $this->request->getVar('keywords'),
                 'icon'            => $this->request->getVar('icon'),
                 'tanggal_publish' => date('Y-m-d', strtotime($this->request->getVar('tanggal_publish'))) . ' ' . date('H:i', strtotime($this->request->getVar('jam'))),
+                'tanggal_event'   => date('Y-m-d', strtotime($this->request->getVar('tanggal_event'))). ' ' . date('H:i', strtotime($this->request->getVar('jam_event'))),
             ];
             $m_berita->edit($data);
 
