@@ -73,6 +73,26 @@
     </div>
 
     <div class="form-group row">
+        <label class="col-md-2">Tanggal Event</label>
+        <div class="col-md-4">
+            <input type="text" name="tanggal_event" class="form-control tanggal" value="<?php if (isset($_POST['tanggal_event'])) {
+    echo set_value('tanggal_event');
+} else {
+    echo date('d-m-Y');
+} ?>">
+            <small class="text-secondary">Format <strong>dd-mm-yyyy</strong>. Misal: <?= date('d-m-Y') ?></small>
+        </div>
+        <div class="col-md-2">
+            <input type="text" name="jam_event" class="form-control jam" value="<?php if (isset($_POST['jam_event'])) {
+    echo set_value('jam_event');
+} else {
+    echo date('H:i:s');
+} ?>">
+            <small class="text-secondary">Format <strong>HH:MM:SS</strong>. Misal: <?= date('H:i:s') ?></small>
+        </div>
+    </div>
+
+    <div class="form-group row">
         <label class="col-md-2">Ringkasan</label>
         <div class="col-md-10">
             <textarea name="ringkasan" class="form-control"><?= set_value('ringkasan') ?></textarea>
