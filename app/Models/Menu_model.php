@@ -1,5 +1,5 @@
 <?php
-
+//menu model
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -36,6 +36,18 @@ class Menu_model extends Model
         $builder = $this->db->table('berita');
         $builder->select('berita.judul_berita, berita.icon, berita.ringkasan, berita.gambar, berita.slug_berita, berita.id_berita');
         $builder->where(['status_berita' => 'Publish', 'jenis_berita' => 'Layanan']);
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
+
+    public function listing()
+    {
+        $builder = $this->db->table('galeri');
+        $builder->select('galeri.*, kategori_galeri.nama_kategori_galeri, kategori_galeri.slug_kategori_galeri, users.nama');
+        $builder->join('kategori_galeri', 'kategori_galeri.id_kategori_galeri = galeri.id_kategori_galeri', 'LEFT');
+        $builder->join('users', 'users.id_user = galeri.id_user', 'LEFT');
+        $builder->orderBy('galeri.id_galeri', 'DESC');
         $query = $builder->get();
 
         return $query->getResultArray();
