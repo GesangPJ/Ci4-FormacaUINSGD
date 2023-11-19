@@ -34,8 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 //ganti login ke masuk
-$routes->get('/masuk', 'Login::index');
-$routes->get('/login', 'Error404::index');
+//$routes->get('/masuk', 'Login::index');
+//$routes->get('/login', 'Error404::index');
 
 /*
  * --------------------------------------------------------------------
