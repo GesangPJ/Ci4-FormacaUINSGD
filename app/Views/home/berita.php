@@ -1,34 +1,43 @@
-<!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-12 text-center">
                 <h2>Berita FORMACA Terbaru</h2><br />
-
             </div>
-            <?php foreach ($berita2 as $berita2) { ?>
-            <div class="col-md-4">
-                <div class="card" style="margin-bottom: 20px;">
-                    <img src="<?= base_url('assets/upload/image/' . $berita2['gambar']) ?>">
-                    <div class="card-body">
-                        <h2>
-                            <a href="<?= base_url('berita/read/' . $berita2['slug_berita']) ?>">
-                                <?= $berita2['judul_berita'] ?>
-                            </a>
-                        </h2>
-                        <p class="card-text">
-                            <?= $berita2['ringkasan'] ?>
-                        </p>
-                        <hr>
-                        <p>
-                            <a href="<?= base_url('berita/read/' . $berita2['slug_berita']) ?>" class="appointment-btn">
-                                <i class="fa fa-chevron-right"></i> Baca...
-                            </a>
-                        </p>
+            <!--====== BLOG PART START ======-->
+            <section class="blog-area pb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <?php foreach ($berita2 as $berita2) { ?>
+                        <div class="col-lg-4 col-md-8 col-sm-10">
+                            <div class="single-blog blog-style-one">
+                                <div class="blog-image">
+                                    <a href="<?= base_url('berita/read/' . $berita2['slug_berita']) ?>"><img
+                                            src="<?= base_url('assets/upload/image/' . $berita2['gambar']) ?>"
+                                            alt="<?= $berita2['judul_berita'] ?>" /></a>
+                                </div>
+                                <div class="blog-content">
+                                    <h5 class="blog-title">
+                                        <a href="<?= base_url('berita/read/' . $berita2['slug_berita']) ?>">
+                                            <?= $berita2['judul_berita'] ?>
+                                        </a>
+                                    </h5>
+                                    <span><i class="lni lni-calendar"></i>
+                                        <?= date('M d, Y', strtotime($berita2['tanggal'])) ?></span>
+                                    <p class="text">
+                                        <?= $berita2['ringkasan'] ?>
+                                    </p>
+                                    <a class="more"
+                                        href="<?= base_url('berita/read/' . $berita2['slug_berita']) ?>">Baca
+                                        Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
                     </div>
                 </div>
-            </div>
-            <?php } ?>
+            </section>
+            <!--====== BLOG PART ENDS ======-->
         </div>
     </div>
-</section><!-- End Contact Section -->
+</section>
