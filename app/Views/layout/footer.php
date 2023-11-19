@@ -52,24 +52,21 @@ $menu_layanan = $menu->layanan();
                         <li><i class="bx bx-chevron-right"></i> <a
                                 href="<?= base_url('/berita/kategori/berita') ?>">Berita</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a
-                                href="<?= base_url('/berita/kategori/pengumuman') ?>">Pengumuman</a></li>
+                                href="<?= base_url('/berita/kategori/events') ?>">Events</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/staff') ?>">Struktur
                                 Organisasi</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a
-                                href="<?= base_url('/berita/kategori/galeri') ?>">Gallery Gambar</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/galeri') ?>">Gallery Gambar</a>
+                        </li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/kontak') ?>">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-7 col-md-6 order-md-last footer-newsletter">
-                    <h4>Find Us on Map</h4>
-                    <style type="text/css" media="screen">
-                    iframe {
-                        width: 100%;
-                        height: 200px;
-                    }
-                    </style>
-                    <?= $site['google_map'] ?>
+                    <h4>FORMACA Newsletter</h4>
+                    <p>Subscribe untuk mendapatkan berita terbaru</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
 
                 </div>
 
@@ -83,7 +80,7 @@ $menu_layanan = $menu->layanan();
         </div>
         <div class="credits">
 
-            Designed by <a href="https://github.com/gesangpj">G.PAUDRA</a>
+            Website Built By <a href="https://github.com/gesangpj">GESANG PAUDRA.J</a>
         </div>
     </div>
 </footer><!-- End Footer -->
