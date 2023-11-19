@@ -51,7 +51,6 @@ class Berita_model extends Model
         $builder->join('users', 'users.id_user = berita.id_user', 'LEFT');
         $builder->where(['status_berita' => 'Publish',
             'jenis_berita'               => 'Berita', 
-            'berita.id_kategori' => 6,
         ]);
         $builder->orderBy('berita.tanggal_publish', 'DESC');
         $builder->limit(10);
