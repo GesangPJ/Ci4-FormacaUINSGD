@@ -1,8 +1,8 @@
 <section id="contact" class="contact">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-12 text-center">
-                <h2>Berita FORMACA Terbaru</h2><br />
+            <div class="section-title">
+                <h2>BERITA FORMACA</h2>
             </div>
             <!--====== BLOG PART START ======-->
             <section class="blog-area pb-5">
