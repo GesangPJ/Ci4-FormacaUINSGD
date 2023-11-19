@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Berita_model;
+use App\Models\Event_model;
 use App\Models\Client_model;
 use App\Models\Galeri_model;
 use App\Models\Konfigurasi_model;
@@ -16,10 +17,12 @@ class Home extends BaseController
         $m_galeri      = new Galeri_model();
         $m_client      = new Client_model();
         $m_berita      = new Berita_model();
+        $m_event      = new Event_model();
         $konfigurasi   = $m_konfigurasi->listing();
         $slider        = $m_galeri->slider();
         $client        = $m_client->testimoni();
         $berita2       = $m_berita->beranda();
+        $event        = $m_event->beranda();
 
         $data = ['title'  => $konfigurasi['namaweb'] . ' | ' . $konfigurasi['tagline'],
             'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
@@ -28,6 +31,7 @@ class Home extends BaseController
             'konfigurasi' => $konfigurasi,
             'client'      => $client,
             'berita2'     => $berita2,
+            'event'      => $event,
             'content'     => 'home/index',
         ];
         echo view('layout/wrapper', $data);
