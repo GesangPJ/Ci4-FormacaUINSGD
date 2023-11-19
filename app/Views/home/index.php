@@ -1,9 +1,12 @@
-<?php use App\Models\Menu_model;
+<?php 
+use App\Models\Menu_model;
+use App\Models\Galeri_model;
 
 $menu    = new Menu_model();
 $berita  = $menu->berita();
 $profil  = $menu->profil();
 $layanan = $menu->layanan();
+$galeri  = $menu->listing();
 ?>
 
 <!-- ======= Hero Section ======= -->
@@ -129,13 +132,83 @@ foreach ($layanan as $layanan) { ?>
 
         </div>
     </section><!-- End Services Section -->
+    <hr>
 
     <?php include 'event.php'?>
+    <hr>
 
     <?php include 'berita.php'?>
+    <hr>
 
-    <!-- ======= Contact Section ======= -->
+    <section id="gallery" class="gallery">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>GALLERY FORMACA</h2>
+                <!--<p><?= $konfigurasi['tentang'] ?></p>-->
+            </div>
+
+            <div class="gallery-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                    <?php foreach ($galeri as $galeri) { ?>
+                    <div class="swiper-slide">
+                        <a class="gallery-lightbox" href="<?= base_url('assets/upload/image/' . $galeri['gambar']) ?>">
+                            <img src="<?= base_url('assets/upload/image/' . $galeri['gambar']) ?>" class="img-fluid"
+                                alt="<?= $galeri['judul_galeri'] ?>">
+                        </a>
+                    </div>
+                    <?php } ?>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>HUBUNGI FORMACA</h2>
+                <p>Ada pertanyaan? Kirimkan pertanyaan anda seputar FORMACA atau Pascasarjana UIN Sunan Gunung Djati
+                    Bandung.</p>
+            </div>
+
+            <form action="forms/appointment.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Masukkan Nama"
+                            required>
+                    </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email"
+                            placeholder="Maskkan Alamat Email" required>
+                    </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="tel" class="form-control" name="subjek" id="subjek"
+                            placeholder="Masukkan Subjek Pertanyaan" required>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Pesan"></textarea>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Kirim</button></div>
+            </form>
+
+        </div>
+    </section>
     <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>LOKASI</h2>
+        </div>
         <div>
             <style type="text/css" media="screen">
             iframe {
@@ -145,5 +218,5 @@ foreach ($layanan as $layanan) { ?>
             </style>
             <?= google_map() ?>
         </div>
-    </section><!-- End Contact Section -->
-</main><!-- End #main -->
+    </section>
+</main>
