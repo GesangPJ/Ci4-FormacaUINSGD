@@ -33,21 +33,21 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $protocol = 'mail';
+    public $protocol = 'smtp';
 
     /**
      * The server path to Sendmail.
      *
      * @var string
      */
-    public $mailPath = '/usr/sbin/sendmail';
+    public $mailPath = '/usr/sbin/sendmail -S mail:1025';
 
     /**
      * SMTP Server Address
      *
      * @var string
      */
-    public $SMTPHost;
+    public $SMTPHost = 'localhost';
 
     /**
      * SMTP Username
@@ -68,7 +68,7 @@ class Email extends BaseConfig
      *
      * @var int
      */
-    public $SMTPPort = 25;
+    public $SMTPPort = 1025;
 
     /**
      * SMTP Timeout (in seconds)
@@ -82,7 +82,7 @@ class Email extends BaseConfig
      *
      * @var bool
      */
-    public $SMTPKeepAlive = false;
+    public $SMTPKeepAlive = true;
 
     /**
      * SMTP Encryption. Either tls or ssl
