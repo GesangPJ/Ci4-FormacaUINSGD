@@ -36,4 +36,30 @@ class Home extends BaseController
         ];
         echo view('layout/wrapper', $data);
     }
+    public function kirimpesan()
+    {
+        // Load the email library
+        $email = \Config\Services::email();
+
+        // Get form data
+        $name = $this->request->getPost('name');
+        $emailAddress = $this->request->getPost('email');
+        $subjek = $this->request->getPost('subjek');
+        $message = $this->request->getPost('message');
+
+        // Set email parameters
+        $email->setTo('info@formaca-uinsgdbandung.com');  // Update with your admin email
+        $email->setFrom($emailAddress, $name);
+        $email->setSubject($subjek);
+        $email->setMessage($message);
+
+        // Send email
+        if ($email->send()) {
+            // Email sent successfully
+            return redirect()->to('/thank-you')->with('success', 'Your appointment request has been sent successfully. Thank you!');
+        } else {
+            // Email sending failed
+            return redirect()->to('/error')->with('error', 'Failed to send appointment request. Please try again later.');
+        }
+    }
 }
