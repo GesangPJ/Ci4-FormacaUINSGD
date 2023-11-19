@@ -8,18 +8,6 @@ $menu_berita  = $menu->berita();
 $menu_profil  = $menu->profil();
 $menu_layanan = $menu->layanan();
 ?>
-<!-- ======= Top Bar ======= -->
-<!--
-  <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-      <div class="align-items-center d-none d-md-flex">
-        <i class="fa fa-home"></i> <?= tagline(); ?>
-      </div>
-      <div class="d-flex align-items-center">
-        <i class="bi bi-phone"></i> <?= telepon() ?>
-      </div>
-    </div>
-  </div>-->
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
