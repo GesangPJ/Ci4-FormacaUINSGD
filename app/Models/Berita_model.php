@@ -31,7 +31,10 @@ class Berita_model extends Model
         $builder->join('kategori', 'kategori.id_kategori = berita.id_kategori', 'LEFT');
         $builder->join('users', 'users.id_user = berita.id_user', 'LEFT');
         $builder->where(['status_berita' => 'Publish',
-            'jenis_berita'               => 'Berita', ]);
+            'jenis_berita'               => 'Berita',
+            'berita.id_kategori' => 6,
+        
+        ]);
         $builder->orderBy('berita.tanggal_publish', 'DESC');
         $builder->limit(3);
         $query = $builder->get();
@@ -47,7 +50,9 @@ class Berita_model extends Model
         $builder->join('kategori', 'kategori.id_kategori = berita.id_kategori', 'LEFT');
         $builder->join('users', 'users.id_user = berita.id_user', 'LEFT');
         $builder->where(['status_berita' => 'Publish',
-            'jenis_berita'               => 'Berita', ]);
+            'jenis_berita'               => 'Berita', 
+            'berita.id_kategori' => 6,
+        ]);
         $builder->orderBy('berita.tanggal_publish', 'DESC');
         $builder->limit(10);
         $query = $builder->get();
