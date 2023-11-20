@@ -40,35 +40,35 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $mailPath = '/usr/sbin/sendmail -S mail:1025';
+    public $mailPath = '/usr/sbin/sendmail';
 
     /**
      * SMTP Server Address
      *
      * @var string
      */
-    public $SMTPHost = 'localhost';
+    public $SMTPHost = 'sandbox.smtp.mailtrap.io';
 
     /**
      * SMTP Username
      *
      * @var string
      */
-    public $SMTPUser;
+    public $SMTPUser = 'af9b43f0e456b4';
 
     /**
      * SMTP Password
      *
      * @var string
      */
-    public $SMTPPass;
+    public $SMTPPass = 'a6c6e5b5fb6fa6';
 
     /**
      * SMTP Port
      *
      * @var int
      */
-    public $SMTPPort = 1025;
+    public $SMTPPort = 2525;
 
     /**
      * SMTP Timeout (in seconds)
