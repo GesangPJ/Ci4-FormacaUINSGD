@@ -1,12 +1,22 @@
 <?php 
 use App\Models\Menu_model;
 use App\Models\Galeri_model;
+use App\Models\Kategori_model;
+use App\Models\Kategori_staff_model;
+use App\Models\Staff_model;
+use App\Models\Konfigurasi_model;
 
 $menu    = new Menu_model();
 $berita  = $menu->berita();
 $profil  = $menu->profil();
 $layanan = $menu->layanan();
 $galeri  = $menu->listing();
+$m_konfigurasi = new Konfigurasi_model();
+$m_staff       = new Staff_model();
+$m_kategori    = new Kategori_staff_model();
+$kategori= $m_kategori->listing();
+
+
 ?>
 
 <!-- ======= Hero Section ======= -->
@@ -77,8 +87,8 @@ foreach ($profil as $profil) { ?>
         <div class="container" data-aos="zoom-in">
 
             <div class="text-center">
-                <h3>Selamat Datang Di <?= $konfigurasi['namaweb'] ?></h3>
-                <p><?= $konfigurasi['tagline'] ?></p>
+                <h3>SELAMAT DATANG DI <?= $konfigurasi['namaweb'] ?></h3>
+
             </div>
 
         </div>
@@ -90,7 +100,7 @@ foreach ($profil as $profil) { ?>
 
             <div class="section-title">
                 <h2>Tentang <?= $konfigurasi['namaweb'] ?></h2>
-                <?= $konfigurasi['deskripsi'] ?>
+
             </div>
 
             <div class="row">
@@ -112,8 +122,7 @@ foreach ($profil as $profil) { ?>
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>VISI & MISI FORMACA</h2>
-                <p>Yuk gunakan layanan yang ada di <?= namaweb() ?>. <?= tagline() ?></p>
+                <h2>KEGIATAN FORMACA</h2>
             </div>
 
             <div class="row">
@@ -122,8 +131,7 @@ foreach ($profil as $profil) { ?>
 foreach ($layanan as $layanan) { ?>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="<?= $ml; ?>00">
                     <div class="icon"><i class="<?= $layanan['icon'] ?>"></i></div>
-                    <h4 class="title"><a
-                            href="<?= base_url('berita/layanan/' . $layanan['slug_berita']) ?>"><?= $layanan['judul_berita'] ?></a>
+                    <h4 class="title"><a href="<?= base_url('#') ?>"><?= $layanan['judul_berita'] ?></a>
                     </h4>
                     <p class="description"><?= $layanan['ringkasan'] ?></p>
                 </div>
@@ -132,7 +140,49 @@ foreach ($layanan as $layanan) { ?>
 
         </div>
     </section><!-- End Services Section -->
-    <hr>
+
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Struktur Organisasi FORMACA</h2>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <?php foreach ($kategori as $kategoriItem) {
+    $id_kategori_staff = $kategoriItem['id_kategori_staff'];
+    $staff = $m_staff->kategori_staff($id_kategori_staff);
+
+    if ($staff) {
+?>
+                <h3 class="text-center"><?= $kategoriItem['nama_kategori_staff'] ?></h3>
+
+                <br>
+                <?php foreach ($staff as $staffItem) { ?>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-4">
+                        <img src="<?= ($staffItem['gambar'] === '') ? icon() : base_url('assets/upload/staff/' . $staffItem['gambar']) ?>"
+                            class="card-img-top" alt="<?= $staffItem['nama'] ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $staffItem['nama'] ?></h5>
+                            <p class="card-text"><?= $staffItem['jabatan'] ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+        }
+    }
+}
+        ?>
+
+            </div>
+
+        </div>
+    </section><!-- End Doctors Section -->
 
     <?php include 'event.php'?>
     <hr>
@@ -201,6 +251,7 @@ foreach ($layanan as $layanan) { ?>
                     <div class="error-message">Error</div>
                     <div class="sent-message">Message sent. Thank you!</div>
                 </div>
+
                 <div class="text-center"><button type="submit">Kirim</button></div>
             </form>
 
