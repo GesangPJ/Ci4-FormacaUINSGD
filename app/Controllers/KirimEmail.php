@@ -21,29 +21,36 @@ class KirimEmail extends BaseController
         $email->setFrom('websiteformaca@formaca-uinsgdbandung.com', 'Website Formaca');
         $email->setSubject($subjek);
         $email->setMessage($message);
-        $email->SMTPDebug = 2;
+        $email->SMTPDebug = 4;
+        if ($email->send()) {
+            echo 'Email sent successfully.';
+        } else {
+            echo 'Email sending failed.';
+        }
 
         // Send email
-    try {
-        if ($email->send()) {
-            // Email sent successfully
-            echo "Email sent successfully";
+        /*
+        try {
+            if ($email->send()) {
+                // Email sent successfully
+                echo "Email sent successfully";
+                exit; 
+            } else {
+                // Email sending failed
+                log_message('error', 'Email sending failed: ' . $email->printDebugger(['headers']));
+                echo "Failed to send email";
+                exit; // Add this line to stop further execution
+                
+            }
+        } catch (\Exception $e) {
+            // Log any other exceptions
+            log_message('error', 'Exception: ' . $e->getMessage());
+            echo "An error occurred";
             exit; // Add this line to stop further execution
-            // return redirect()->to('/')->with('success', 'Email sent successfully');
-        } else {
-            // Email sending failed
-            log_message('error', 'Email sending failed: ' . $email->printDebugger(['headers']));
-            echo "Failed to send email";
-            exit; // Add this line to stop further execution
-            // return redirect()->to('/')->with('error', 'Failed to send email');
+            
         }
-    } catch (\Exception $e) {
-        // Log any other exceptions
-        log_message('error', 'Exception: ' . $e->getMessage());
-        echo "An error occurred";
-        exit; // Add this line to stop further execution
-        // return redirect()->to('/')->with('error', 'An error occurred');
-    }
+        */
+        
         
     }
 }
