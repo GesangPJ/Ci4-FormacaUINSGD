@@ -79,10 +79,11 @@ $menu_layanan = $menu->layanan();
         <div class="copyright">
             &copy; 2023 <strong><span>FORMACA UIN SGD Bandung</span></strong>. All Rights Reserved <br />
         </div>
+        <!--
         <div class="credits">
 
             Website Built By <a href="https://github.com/gesangpj">GESANG PAUDRA.J</a>
-        </div>
+        </div>-->
     </div>
 </footer><!-- End Footer -->
 
