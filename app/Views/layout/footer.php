@@ -58,11 +58,25 @@ $menu_layanan = $menu->layanan();
                                 Organisasi</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/galeri') ?>">Gallery Gambar</a>
                         </li>
+                        <li><i class="bx bx-chevron-right"></i><a href="https://bit.ly/DAFTARTOEFATOAFL"
+                                target="blank">Sertifikasi TOEFA & TOAFL</a>
+                        </li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/kontak') ?>">Kontak</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-7 col-md-6 order-md-last footer-newsletter">
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Event</h4>
+                    <ul>
+
+                        <li><i class="bx bx-chevron-right"></i><a href="https://bit.ly/DAFTARTOEFATOAFL"
+                                target="blank">Sertifikasi TOEFA & TOAFL</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-5 col-md-6 order-md-last footer-newsletter">
                     <h4>FORMACA Newsletter</h4>
                     <p>Subscribe untuk mendapatkan berita terbaru</p>
                     <form action="" method="post">
