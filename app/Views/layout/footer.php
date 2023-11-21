@@ -58,21 +58,16 @@ $menu_layanan = $menu->layanan();
                                 Organisasi</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/galeri') ?>">Gallery Gambar</a>
                         </li>
-                        <li><i class="bx bx-chevron-right"></i><a href="https://bit.ly/DAFTARTOEFATOAFL"
-                                target="blank">Sertifikasi TOEFA & TOAFL</a>
-                        </li>
                         <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('/kontak') ?>">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Event</h4>
+                    <h4>Pendaftaran</h4>
                     <ul>
-
                         <li><i class="bx bx-chevron-right"></i><a href="https://bit.ly/DAFTARTOEFATOAFL"
                                 target="blank">Sertifikasi TOEFA & TOAFL</a>
                         </li>
-
                     </ul>
                 </div>
 
