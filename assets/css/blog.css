@@ -7,7 +7,13 @@
 
 .blog-style-one .blog-image {
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: 20px 20px 0 0;
+        position: relative;
+    }
+    
+    .blog-event {
+        overflow: hidden;
+        border-radius: 0px 0px 0 0;
     position: relative;
 }
 

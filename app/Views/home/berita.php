@@ -1,9 +1,6 @@
 <section id="contact" class="contact">
     <div class="container">
         <div class="row mt-5">
-            <div class="section-title">
-                <h2>BERITA FORMACA</h2>
-            </div>
             <!--====== BLOG PART START ======-->
             <section class="blog-area pb-5">
                 <div class="container">
