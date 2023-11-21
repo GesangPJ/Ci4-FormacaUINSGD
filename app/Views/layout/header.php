@@ -50,7 +50,23 @@ $menu_layanan = $menu->layanan();
                         <!--<li><a href="<?= base_url('video') ?>">Galeri Video</a></li>-->
                     </ul>
                 </li>
+                <li class="dropdown"><a href="#"><span>Pendaftaran</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="https://bit.ly/DAFTARTOEFATOAFL" target="blank">Sertifikasi TOEFA & TOAFL</a></li>
+
+                    </ul>
+                </li>
                 <li><a class="nav-link scrollto" href="<?= base_url('kontak') ?>">Kontak</a></li>
+                <li>
+                    <a href="tel:<?= $site['telepon'] ?>">
+                        <i class="fa fa-phone"></i> <?= $site['telepon'] ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:<?= $site['email'] ?>">
+                        <i class="fa fa-envelope"></i> <?= $site['email'] ?>
+                    </a>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
