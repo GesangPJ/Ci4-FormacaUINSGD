@@ -87,7 +87,7 @@ foreach ($profil as $profil) { ?>
         <div class="container" data-aos="zoom-in">
 
             <div class="text-center">
-                <h3>SELAMAT DATANG DI <?= $konfigurasi['namaweb'] ?></h3>
+                <h2 class="white">SELAMAT DATANG DI <?= $konfigurasi['namaweb'] ?></h2>
 
             </div>
 
@@ -184,8 +184,27 @@ foreach ($layanan as $layanan) { ?>
         </div>
     </section><!-- End Doctors Section -->
 
+    <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="text-center">
+                <h2 class="white">EVENT MENDATANG</h2>
+            </div>
+
+        </div>
+    </section>
+
     <?php include 'event.php'?>
-    <hr>
+
+    <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="text-center">
+                <h2 class="white">BERITA TERBARU</h2>
+            </div>
+
+        </div>
+    </section>
 
     <?php include 'berita.php'?>
     <hr>
