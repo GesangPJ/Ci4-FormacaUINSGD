@@ -36,7 +36,7 @@
                 <option value="Berita">Berita</option>
                 <option value="Layanan" <?php if ($berita['jenis_berita'] === 'Layanan') {
     echo 'selected';
-} ?>>Layanan</option>
+} ?>>Kegiatan</option>
                 <option value="Profil" <?php if ($berita['jenis_berita'] === 'Profil') {
     echo 'selected';
 } ?>>Profil</option>
