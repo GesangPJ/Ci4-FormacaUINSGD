@@ -33,7 +33,7 @@
         <div class="col-md-2">
             <select name="jenis_berita" class="form-control">
                 <option value="Berita">Berita</option>
-                <option value="Layanan">Layanan</option>
+                <option value="Layanan">Kegiatan</option>
                 <option value="Profil">Profil</option>
             </select>
             <small class="text-secondary">Jenis konten</small>
