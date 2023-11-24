@@ -2,30 +2,16 @@
 .blog-style-one {
     margin-top: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add box shadow */
+    display: flex;
+        /* Added display: flex */
+        flex-direction: column;
+        /* Added flex-direction: column */
 }
 
 .blog-style-one .blog-image {
     overflow: hidden;
     border-radius: 20px 20px 0 0;
-        position: relative;
-    }
-    
-    .blog-event {
-        overflow: hidden;
-        border-radius: 0px 0px 0 0;
     position: relative;
-}
-
-.blog-style-one .blog-image .category {
-    background-color: var(--primary);
-    color: var(--white);
-    font-size: 13px;
-    padding: 7px 20px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    border-radius: 30px;
 }
 
 .blog-style-one .blog-image img {
@@ -46,6 +32,8 @@
 }
 
 .blog-style-one .blog-content {
+    flex-grow: 1;
+        /* Added flex-grow: 1 to make it take up remaining space */
     padding: 30px;
     border: 1px solid rgb(153, 153, 153);
     border-radius: 0 0 8px 8px;
