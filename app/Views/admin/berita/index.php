@@ -47,7 +47,10 @@ foreach ($berita as $berita) { ?>
                     </a>
                     <br><i class="fa fa-home"></i> <a
                         href="<?= base_url('admin/berita/jenis_berita/' . $berita['jenis_berita']) ?>">
-                        <?php if($berita['jenis_berita'] === 'Layanan' ) { echo 'Kegiatan';}?>
+                        <?php if($berita['jenis_berita'] === 'Layanan' ) { echo 'Kegiatan';}
+                        else if($berita['jenis_berita']==='Berita') {echo 'Berita';}
+                        else if($berita['jenis_berita']==='Profil') {echo 'Profil';}
+                        ?>
                     </a>
                 </small>
             </td>
