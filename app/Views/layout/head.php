@@ -42,6 +42,7 @@ $site        = $konfigurasi->listing();
     <!-- Template Main CSS File -->
     <link href="<?= base_url() ?>/assets/template/assets/css/style.css" rel="stylesheet">
 
+
     <!-- =======================================================
   * Template Name: Medicio - v4.1.0
   * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
