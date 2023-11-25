@@ -18,7 +18,7 @@ class KirimEmail extends BaseController
 
         // Set email parameters
         $email->setTo('info@formaca-uinsgdbandung.com');  // Update with your admin email
-        $email->setFrom('websiteformaca@formaca-uinsgdbandung.com', 'Website Formaca');
+        $email->setFrom($emailAddress , $name);
         $email->setSubject($subjek);
         $email->setMessage($message);
         $email->SMTPDebug = 4;
