@@ -1,5 +1,4 @@
 <?php
-// app/Controllers/YourController.php
 
 namespace App\Controllers;
 
@@ -18,40 +17,27 @@ class KirimEmail extends BaseController
 
         // Set email parameters
         $email->setTo('info@formaca-uinsgdbandung.com');  // Update with your admin email
-        $email->setFrom($emailAddress , $name);
+        $email->setFrom($emailAddress, $name);
         $email->setSubject($subjek);
         $email->setMessage($message);
-        $email->SMTPDebug = 4;
-        if ($email->send()) {
-            echo 'Email sent successfully.';
-        } else {
-            echo 'Email sending failed.';
-        }
 
-        // Send email
-        /*
+        // Uncomment the following line for production
+        $email->SMTPDebug = 0;
+
         try {
             if ($email->send()) {
                 // Email sent successfully
-                echo "Email sent successfully";
-                exit; 
+                return $this->response->setStatusCode(200)->setJSON(['Email sent successfully.']);
             } else {
                 // Email sending failed
-                log_message('error', 'Email sending failed: ' . $email->printDebugger(['headers']));
-                echo "Failed to send email";
-                exit; // Add this line to stop further execution
-                
+                $smtpDebug = $email->printDebugger(['headers']);
+                log_message('error', 'Email sending failed: ' . $smtpDebug);
+                return $this->response->setStatusCode(500)->setJSON(['Email sending failed.']);
             }
         } catch (\Exception $e) {
             // Log any other exceptions
             log_message('error', 'Exception: ' . $e->getMessage());
-            echo "An error occurred";
-            exit; // Add this line to stop further execution
-            
+            return $this->response->setStatusCode(500)->setJSON(['An error occurred.']);
         }
-        */
-        
-        
     }
 }
-?>
