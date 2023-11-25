@@ -75,14 +75,14 @@ class Email extends BaseConfig
      *
      * @var int
      */
-    public $SMTPTimeout = 5;
+    public $SMTPTimeout = 60;
 
     /**
      * Enable persistent SMTP connections
      *
      * @var bool
      */
-    public $SMTPKeepAlive = true;
+    public $SMTPKeepAlive = false;
 
     /**
      * SMTP Encryption. Either tls or ssl
@@ -110,7 +110,7 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $mailType = 'text';
+    public $mailType = 'html';
 
     /**
      * Character set (utf-8, iso-8859-1, etc.)
@@ -124,14 +124,14 @@ class Email extends BaseConfig
      *
      * @var bool
      */
-    public $validate = false;
+    public $validate = true;
 
     /**
      * Email Priority. 1 = highest. 5 = lowest. 3 = normal
      *
      * @var int
      */
-    public $priority = 3;
+    public $priority = 1;
 
     /**
      * Newline character. (Use “\r\n” to comply with RFC 822)
