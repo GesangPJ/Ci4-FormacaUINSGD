@@ -244,8 +244,8 @@ foreach ($layanan as $layanan) { ?>
                     Bandung.</p>
             </div>
 
-            <form action="<?=base_url('/kirim')?>" method="post" role="form" class="php-email-form" data-aos="fade-up"
-                data-aos-delay="100">
+            <form action="<?=base_url('KirimEmail/kirimpesan')?>" method="post" role="form" class="php-email-form"
+                data-aos="fade-up" data-aos-delay="100">
                 <div class="row">
                     <div class="col-md-4 form-group">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Masukkan Nama"
