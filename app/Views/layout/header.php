@@ -54,6 +54,7 @@ $menu_layanan = $menu->layanan();
                     <ul>
                         <li><a href="https://bit.ly/DAFTARTOEFATOAFL" target="blank">Sertifikasi TOEFA & TOAFL</a></li>
 
+
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="<?= base_url('kontak') ?>">Kontak</a></li>
