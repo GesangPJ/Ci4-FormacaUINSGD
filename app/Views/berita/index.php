@@ -21,7 +21,9 @@
                     <div class="card" style="margin-bottom: 20px;">
                         <img src="<?= base_url('assets/upload/image/' . $berita['gambar']) ?>">
                         <div class="card-body">
-                            <h2><?= $berita['judul_berita'] ?></h2>
+                            <a href="<?= base_url('berita/read/' . $berita['slug_berita']) ?>">
+                                <h2><?= $berita['judul_berita'] ?></h2>
+                            </a>
                             <p class="card-text">
                                 <?= $berita['ringkasan'] ?>
                             </p>
